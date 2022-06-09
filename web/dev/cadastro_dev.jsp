@@ -11,24 +11,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
         <link rel="stylesheet" href="./css/styles.css">
     </head>
-    <body>
-        <form class="box">
+    <body style="height: 100vh;width: 100%; display: flex; align-items: center; justify-content: center">
+        <form style="width: 55vh" class="box" action="cadastrarDevMT.jsp" method="POST">
             <form class="box">
                 <div class="field">
-                    <label class="label">Email</label>
+                    <label class="label">Nome da desenvolvedora...</label>
                     <div class="control">
-                        <input class="input" type="email" placeholder="e.g. alex@example.com">
+                        <input name="devName" class="input" type="text" placeholder="Nome da Desenvolvedora...">
                     </div>
+                    
                 </div>
-
-                <div class="field">
-                    <label class="label">Password</label>
-                    <div class="control">
-                        <input class="input" type="password" placeholder="********">
-                    </div>
-                </div>
-
-                <button class="button is-primary">Sign in</button>
+                <button class="button is-primary" type="submit">Cadastrar</button>
             </form>
         </form>
     </body>
