@@ -1,5 +1,4 @@
 <%@page import="br.com.DAO.userDAO"%>
-<%@page import="br.com.model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -39,14 +38,12 @@
             <button type="submit">Login</button>
         </form>
         <%
-        userDAO userDAO = new userDAO();
-        
+        userDAO userDAO = new userDAO();  
         if(userDAO.verifyUser(request.getParameter("username"), request.getParameter("password"))){
             session.setAttribute("user", request.getParameter("username"));
             response.sendRedirect("home.jsp");
             
         }
-    System.out.println(userDAO.verifyUser(request.getParameter("username"), request.getParameter("password")));
     
     %>
     </body>

@@ -16,7 +16,7 @@ public class gameDAO {
     Connection con;
     PreparedStatement pstm;
     ResultSet rs;
-     ArrayList<Games> lista = new ArrayList<>();
+    ArrayList<Games> lista = new ArrayList<>();
     
      public void cadGame(Games games) throws ClassNotFoundException{
         

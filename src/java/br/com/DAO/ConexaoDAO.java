@@ -8,13 +8,17 @@ public class ConexaoDAO {
     
     public Connection conexaoBD() throws ClassNotFoundException{
         Connection con = null;
+        String server = "anhanguera.cmi4gdq4rsw6.sa-east-1.rds.amazonaws.com";
+        String banco = "POOIIDB";
+        String user = "admin";
+        String pass = "adminadmin";
+        
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/pooiidb?user=root&password=2216";            
+            String url = "jdbc:mysql://"+server+":3306/"+banco+"?user="+user+"&password="+pass+"";            
             con = DriverManager.getConnection(url);            
-          
-        } catch (SQLException e) {
-       
+            
+        } catch (SQLException e){
         }
         return con;
     }

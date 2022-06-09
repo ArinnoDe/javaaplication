@@ -26,7 +26,6 @@
         if((String)session.getAttribute("user") == null){
             response.sendRedirect("login.jsp");
         };
-        
         %>
         
         
@@ -42,14 +41,14 @@
                     <div class="navbar-end">
                         <a class="navbar-item" href="/WebApplication1/dev/cadastro_dev.jsp">Cad Dev</a>
                         <a class="navbar-item" href="/WebApplication1/game/cadastro_game.jsp">Cad Game</a>
-                        <a class="navbar-item" href="/WebApplication1/avaliation/avaliation.jsp">Avaliation</a>
+                        <a class="navbar-item" href="/WebApplication1/avaliation/avaliation.jsp">Avaluation</a>
                     </div>
                 </div>
             </nav>
         </section>
 
 
-        <section id="articles">
+        <section id="articles"  style="display: flex; text-align: center; justify-content: center; margin-top: 50px" >
 
             <table class="table">
                 <thead>

@@ -21,6 +21,7 @@ public class userDAO {
     public boolean verifyUser(String userName, String password) throws ClassNotFoundException{
         boolean isVerify = false;
         String querry = "select * from USERS";
+        
         con = new ConexaoDAO().conexaoBD();
        
          
@@ -32,7 +33,7 @@ public class userDAO {
                 
             User user = new User();
             user.setUSER_NAME(rs.getString("USER_NAME"));
-            user.setUSER_PASSWORD(rs.getString("USER_NAME"));
+            user.setUSER_PASSWORD(rs.getString("USER_PASSWORD"));
             
             if((user.getUSER_NAME().equals(userName) && user.getUSER_PASSWORD().equals(password)) && (user.getUSER_NAME() != null && user.getUSER_PASSWORD() != null) && (!user.getUSER_NAME().isEmpty() && !user.getUSER_PASSWORD().isEmpty()))
                 isVerify = true;
@@ -43,9 +44,5 @@ public class userDAO {
 
          return isVerify;
      }
-     
-     
-     
-     
     }
 
